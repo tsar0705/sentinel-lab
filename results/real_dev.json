@@ -1,0 +1,541 @@
+{
+ "summary": {
+  "datasets": 28,
+  "in_scope": 25,
+  "out_of_scope": 3,
+  "recall_in_scope": 0.8,
+  "recall_overall": 0.7142857142857143,
+  "mean_offlabel_techniques": 0.4642857142857143,
+  "per_technique": {
+   "T1003": {
+    "detected": 6,
+    "n": 6
+   },
+   "T1021": {
+    "detected": 3,
+    "n": 6
+   },
+   "T1047": {
+    "detected": 2,
+    "n": 2
+   },
+   "T1053": {
+    "detected": 1,
+    "n": 1
+   },
+   "T1055": {
+    "detected": 2,
+    "n": 3
+   },
+   "T1059": {
+    "detected": 0,
+    "n": 1
+   },
+   "T1069": {
+    "detected": 1,
+    "n": 1
+   },
+   "T1218": {
+    "detected": 2,
+    "n": 2
+   },
+   "T1547": {
+    "detected": 1,
+    "n": 1
+   },
+   "T1562": {
+    "detected": 2,
+    "n": 2
+   }
+  }
+ },
+ "results": [
+  {
+   "id": "SDWIN-190319131123",
+   "title": "Empire Over-Pass-The-Hash",
+   "techs": [
+    "T1550"
+   ],
+   "events": 10271,
+   "alerts": 1,
+   "fired": [
+    "T1003"
+   ],
+   "in_scope": false,
+   "detected": false,
+   "offlabel": 1,
+   "by": []
+  },
+  {
+   "id": "SDWIN-190319145126",
+   "title": "Rubeus Userland ASKTGT PTT",
+   "techs": [
+    "T1003"
+   ],
+   "events": 1179,
+   "alerts": 1,
+   "fired": [
+    "T1003"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W02-credential-tooling"
+   ]
+  },
+  {
+   "id": "SDWIN-190518201207",
+   "title": "Empire Shell Net Domain Admins",
+   "techs": [
+    "T1069"
+   ],
+   "events": 1749,
+   "alerts": 1,
+   "fired": [
+    "T1069"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W11-group-discovery"
+   ]
+  },
+  {
+   "id": "SDWIN-190518202151",
+   "title": "Empire Mimikatz LogonPasswords",
+   "techs": [
+    "T1003"
+   ],
+   "events": 6026,
+   "alerts": 1,
+   "fired": [
+    "T1003"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W01-lsass-access"
+   ]
+  },
+  {
+   "id": "SDWIN-190518210125",
+   "title": "Empire Invoke SMBExec",
+   "techs": [
+    "T1021"
+   ],
+   "events": 7504,
+   "alerts": 3,
+   "fired": [
+    "T1003",
+    "T1021",
+    "T1059"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 2,
+   "by": [
+    "W15-remote-service"
+   ]
+  },
+  {
+   "id": "SDWIN-190518210652",
+   "title": "Empire Invoke PsExec",
+   "techs": [
+    "T1021"
+   ],
+   "events": 4348,
+   "alerts": 2,
+   "fired": [
+    "T1021",
+    "T1059"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 1,
+   "by": [
+    "W15-remote-service"
+   ]
+  },
+  {
+   "id": "SDWIN-190625133822",
+   "title": "Empire Reg Dump SAM Hive",
+   "techs": [
+    "T1003"
+   ],
+   "events": 738,
+   "alerts": 1,
+   "fired": [
+    "T1003"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W02-credential-tooling"
+   ]
+  },
+  {
+   "id": "SDWIN-191225045202",
+   "title": "Empire Invoke InternalMonologue",
+   "techs": [
+    "T1112"
+   ],
+   "events": 1635,
+   "alerts": 0,
+   "fired": [],
+   "in_scope": false,
+   "detected": false,
+   "offlabel": 0,
+   "by": []
+  },
+  {
+   "id": "SDWIN-200722001847",
+   "title": "Empire Elevated Registry Run Keys",
+   "techs": [
+    "T1547"
+   ],
+   "events": 657,
+   "alerts": 1,
+   "fired": [
+    "T1547"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W07-run-key"
+   ]
+  },
+  {
+   "id": "SDWIN-200806012009",
+   "title": "Covenant SharpSC Query",
+   "techs": [
+    "T1021"
+   ],
+   "events": 349,
+   "alerts": 0,
+   "fired": [],
+   "in_scope": true,
+   "detected": false,
+   "offlabel": 0,
+   "by": []
+  },
+  {
+   "id": "SDWIN-200806031938",
+   "title": "Covenant SharpSC Stop Service",
+   "techs": [
+    "T1021"
+   ],
+   "events": 1264,
+   "alerts": 0,
+   "fired": [],
+   "in_scope": true,
+   "detected": false,
+   "offlabel": 0,
+   "by": []
+  },
+  {
+   "id": "SDWIN-200807103913",
+   "title": "Empire Mimikatz Lsadump LSA Patch",
+   "techs": [
+    "T1003"
+   ],
+   "events": 6982,
+   "alerts": 1,
+   "fired": [
+    "T1003"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W01-lsass-access"
+   ]
+  },
+  {
+   "id": "SDWIN-200914080546",
+   "title": "Empire Remote WMIC Add User",
+   "techs": [
+    "T1047"
+   ],
+   "events": 12278,
+   "alerts": 5,
+   "fired": [
+    "T1047",
+    "T1087",
+    "T1562"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 2,
+   "by": [
+    "W05-wmi-exec"
+   ]
+  },
+  {
+   "id": "SDWIN-200917174542",
+   "title": "DCOM ExecuteExcel4macro",
+   "techs": [
+    "T1021"
+   ],
+   "events": 8121,
+   "alerts": 1,
+   "fired": [
+    "T1053"
+   ],
+   "in_scope": true,
+   "detected": false,
+   "offlabel": 1,
+   "by": []
+  },
+  {
+   "id": "SDWIN-200921001437",
+   "title": "Empire Invoke WMI",
+   "techs": [
+    "T1047"
+   ],
+   "events": 6383,
+   "alerts": 2,
+   "fired": [
+    "T1047",
+    "T1059"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 1,
+   "by": [
+    "W05-wmi-exec"
+   ]
+  },
+  {
+   "id": "SDWIN-200921175806",
+   "title": "Empire Elevated Scheduled Tasks",
+   "techs": [
+    "T1053"
+   ],
+   "events": 59399,
+   "alerts": 5,
+   "fired": [
+    "T1053",
+    "T1059",
+    "T1547",
+    "T1562"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 3,
+   "by": [
+    "W06-scheduled-task"
+   ]
+  },
+  {
+   "id": "SDWIN-201009183000",
+   "title": "Covenant Remote DCOM Iertutil DLL Hijacking",
+   "techs": [
+    "T1021"
+   ],
+   "events": 37814,
+   "alerts": 3,
+   "fired": [
+    "T1021",
+    "T1053",
+    "T1055"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 2,
+   "by": [
+    "W15-remote-service"
+   ]
+  },
+  {
+   "id": "SDWIN-201019002900",
+   "title": "SAM Copy via Esentutl VSS",
+   "techs": [
+    "T1003"
+   ],
+   "events": 915,
+   "alerts": 1,
+   "fired": [
+    "T1003"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W02-credential-tooling"
+   ]
+  },
+  {
+   "id": "SDWIN-201019232515",
+   "title": "Mavinject Process DLL Injection",
+   "techs": [
+    "T1055"
+   ],
+   "events": 509,
+   "alerts": 1,
+   "fired": [
+    "T1055"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W08-injection"
+   ]
+  },
+  {
+   "id": "SDWIN-201022015432",
+   "title": "CMSTP Proxy Execution",
+   "techs": [
+    "T1218"
+   ],
+   "events": 1166,
+   "alerts": 1,
+   "fired": [
+    "T1218"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W04-lolbin-proxy"
+   ]
+  },
+  {
+   "id": "SDWIN-201022022144",
+   "title": "Mshta Javascript GetObject Sct",
+   "techs": [
+    "T1218"
+   ],
+   "events": 1151,
+   "alerts": 1,
+   "fired": [
+    "T1218"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W04-lolbin-proxy"
+   ]
+  },
+  {
+   "id": "SDWIN-201023031210",
+   "title": "PurpleSharp PE Injection CreateRemoteThread",
+   "techs": [
+    "T1055"
+   ],
+   "events": 692,
+   "alerts": 1,
+   "fired": [
+    "T1055"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W08-injection"
+   ]
+  },
+  {
+   "id": "SDWIN-201028191914",
+   "title": "Windows Vault Web Credentials",
+   "techs": [
+    "T1055"
+   ],
+   "events": 120,
+   "alerts": 0,
+   "fired": [],
+   "in_scope": true,
+   "detected": false,
+   "offlabel": 0,
+   "by": []
+  },
+  {
+   "id": "SDWIN-201029202324",
+   "title": "SharpView PCRE.NET",
+   "techs": [
+    "T1059"
+   ],
+   "events": 267,
+   "alerts": 0,
+   "fired": [],
+   "in_scope": true,
+   "detected": false,
+   "offlabel": 0,
+   "by": []
+  },
+  {
+   "id": "SDWIN-201102163918",
+   "title": "Seatbelt Group User Discovery",
+   "techs": [
+    "T1012"
+   ],
+   "events": 451,
+   "alerts": 0,
+   "fired": [],
+   "in_scope": false,
+   "detected": false,
+   "offlabel": 0,
+   "by": []
+  },
+  {
+   "id": "SDWIN-220703123711",
+   "title": "Disabling Process Command Line Logging via Registry Modification",
+   "techs": [
+    "T1562"
+   ],
+   "events": 8705,
+   "alerts": 1,
+   "fired": [
+    "T1562"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W10-impair-defenses"
+   ]
+  },
+  {
+   "id": "SDWIN-220803205800",
+   "title": "Stopping Event Logging via Creation of MiniNt Registry Key",
+   "techs": [
+    "T1562"
+   ],
+   "events": 6133,
+   "alerts": 1,
+   "fired": [
+    "T1562"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W10-impair-defenses"
+   ]
+  },
+  {
+   "id": "SDWIN-230718151900",
+   "title": "Dumping NTDS.dit using NTDSutil",
+   "techs": [
+    "T1003"
+   ],
+   "events": 11184,
+   "alerts": 1,
+   "fired": [
+    "T1003"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W02-credential-tooling"
+   ]
+  }
+ ]
+}

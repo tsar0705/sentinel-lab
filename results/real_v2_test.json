@@ -1,0 +1,1318 @@
+{
+ "summary": {
+  "datasets": 69,
+  "in_scope": 54,
+  "out_of_scope": 15,
+  "recall_in_scope": 0.8333333333333334,
+  "recall_overall": 0.6521739130434783,
+  "mean_offlabel_techniques": 1.1884057971014492,
+  "per_technique": {
+   "T1003": {
+    "detected": 11,
+    "n": 12
+   },
+   "T1021": {
+    "detected": 6,
+    "n": 9
+   },
+   "T1047": {
+    "detected": 4,
+    "n": 4
+   },
+   "T1049": {
+    "detected": 1,
+    "n": 1
+   },
+   "T1053": {
+    "detected": 2,
+    "n": 3
+   },
+   "T1055": {
+    "detected": 2,
+    "n": 3
+   },
+   "T1059": {
+    "detected": 2,
+    "n": 3
+   },
+   "T1069": {
+    "detected": 2,
+    "n": 3
+   },
+   "T1087": {
+    "detected": 2,
+    "n": 2
+   },
+   "T1135": {
+    "detected": 1,
+    "n": 1
+   },
+   "T1218": {
+    "detected": 8,
+    "n": 8
+   },
+   "T1547": {
+    "detected": 1,
+    "n": 1
+   },
+   "T1562": {
+    "detected": 4,
+    "n": 5
+   }
+  }
+ },
+ "results": [
+  {
+   "id": "SDWIN-190301125905",
+   "title": "Empire Powerview Add-DomainObjectAcl",
+   "techs": [
+    "T1222"
+   ],
+   "events": 9002,
+   "alerts": 5,
+   "fired": [
+    "T1003",
+    "T1049",
+    "T1069",
+    "T1087",
+    "T1135"
+   ],
+   "in_scope": false,
+   "detected": false,
+   "offlabel": 5,
+   "by": []
+  },
+  {
+   "id": "SDWIN-190301174830",
+   "title": "Empire DCSync",
+   "techs": [
+    "T1003"
+   ],
+   "events": 8465,
+   "alerts": 3,
+   "fired": [
+    "T1003",
+    "T1047",
+    "T1055"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 2,
+   "by": [
+    "P01-ps-credential-tooling"
+   ]
+  },
+  {
+   "id": "SDWIN-190319020147",
+   "title": "Empire Net Local Administrators Group",
+   "techs": [
+    "T1069"
+   ],
+   "events": 884,
+   "alerts": 1,
+   "fired": [
+    "T1069"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W11-group-discovery"
+   ]
+  },
+  {
+   "id": "SDWIN-190319020729",
+   "title": "Empire Net Local Users",
+   "techs": [
+    "T1087"
+   ],
+   "events": 1907,
+   "alerts": 1,
+   "fired": [
+    "T1087"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W12-account-discovery"
+   ]
+  },
+  {
+   "id": "SDWIN-190319021158",
+   "title": "Empire Net Domain Users",
+   "techs": [
+    "T1087"
+   ],
+   "events": 633,
+   "alerts": 1,
+   "fired": [
+    "T1087"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W12-account-discovery"
+   ]
+  },
+  {
+   "id": "SDWIN-190319023812",
+   "title": "Empire Userland Registry Run Keys",
+   "techs": [
+    "T1547"
+   ],
+   "events": 40569,
+   "alerts": 7,
+   "fired": [
+    "T1047",
+    "T1059",
+    "T1087",
+    "T1547",
+    "T1562"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 4,
+   "by": [
+    "P11-ps-run-key",
+    "W07-run-key"
+   ]
+  },
+  {
+   "id": "SDWIN-190319024742",
+   "title": "Empire Userland Scheduled Tasks",
+   "techs": [
+    "T1053"
+   ],
+   "events": 1297,
+   "alerts": 3,
+   "fired": [
+    "T1053",
+    "T1059"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 1,
+   "by": [
+    "P07-ps-scheduled-task",
+    "W06-scheduled-task"
+   ]
+  },
+  {
+   "id": "SDWIN-190403133337",
+   "title": "IKEEXT Remote Service DLL Hijack",
+   "techs": [
+    "T1574"
+   ],
+   "events": 6349,
+   "alerts": 5,
+   "fired": [
+    "T1021",
+    "T1047",
+    "T1087",
+    "T1562"
+   ],
+   "in_scope": false,
+   "detected": false,
+   "offlabel": 4,
+   "by": []
+  },
+  {
+   "id": "SDWIN-190518182022",
+   "title": "Empire VBS Execution",
+   "techs": [
+    "T1059"
+   ],
+   "events": 2067,
+   "alerts": 2,
+   "fired": [
+    "T1059"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "P09-ps-script-abuse",
+    "W09-script-abuse"
+   ]
+  },
+  {
+   "id": "SDWIN-190518184306",
+   "title": "Empire Elevated WMI Eventing",
+   "techs": [
+    "T1546"
+   ],
+   "events": 79896,
+   "alerts": 10,
+   "fired": [
+    "T1003",
+    "T1047",
+    "T1055",
+    "T1059",
+    "T1547",
+    "T1562"
+   ],
+   "in_scope": false,
+   "detected": false,
+   "offlabel": 6,
+   "by": []
+  },
+  {
+   "id": "SDWIN-190518200432",
+   "title": "Empire PSInject",
+   "techs": [
+    "T1055"
+   ],
+   "events": 5898,
+   "alerts": 4,
+   "fired": [
+    "T1055",
+    "T1059"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 1,
+   "by": [
+    "P06-ps-injection",
+    "W08-injection"
+   ]
+  },
+  {
+   "id": "SDWIN-190518211052",
+   "title": "Empire Invoke DCOM ShellWindows",
+   "techs": [
+    "T1021"
+   ],
+   "events": 32706,
+   "alerts": 6,
+   "fired": [
+    "T1003",
+    "T1021",
+    "T1055",
+    "T1059",
+    "T1547"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 4,
+   "by": [
+    "P10-ps-remoting"
+   ]
+  },
+  {
+   "id": "SDWIN-190518211456",
+   "title": "Empire Invoke PSRemoting",
+   "techs": [
+    "T1021"
+   ],
+   "events": 2744,
+   "alerts": 3,
+   "fired": [
+    "T1021",
+    "T1059"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 1,
+   "by": [
+    "W15-remote-service"
+   ]
+  },
+  {
+   "id": "SDWIN-190518213907",
+   "title": "Empire Invoke Execute MSBuild",
+   "techs": [
+    "T1047"
+   ],
+   "events": 4559,
+   "alerts": 5,
+   "fired": [
+    "T1021",
+    "T1047",
+    "T1059"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 2,
+   "by": [
+    "P08-ps-wmi",
+    "W05-wmi-exec"
+   ]
+  },
+  {
+   "id": "SDWIN-190518221344",
+   "title": "Empire Invoke DLLInjection",
+   "techs": [
+    "T1055"
+   ],
+   "events": 12200,
+   "alerts": 5,
+   "fired": [
+    "T1003",
+    "T1047",
+    "T1055",
+    "T1087"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 3,
+   "by": [
+    "P06-ps-injection",
+    "W08-injection"
+   ]
+  },
+  {
+   "id": "SDWIN-190518224039",
+   "title": "Empire Find Local Admin Access",
+   "techs": [
+    "T1069"
+   ],
+   "events": 4570,
+   "alerts": 7,
+   "fired": [
+    "T1003",
+    "T1047",
+    "T1049",
+    "T1059",
+    "T1069",
+    "T1087",
+    "T1135"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 6,
+   "by": [
+    "P02-ps-group-discovery"
+   ]
+  },
+  {
+   "id": "SDWIN-190518230752",
+   "title": "Empire Mimikatz Extract Kerberos Keys",
+   "techs": [
+    "T1003"
+   ],
+   "events": 13199,
+   "alerts": 2,
+   "fired": [
+    "T1047",
+    "T1055"
+   ],
+   "in_scope": true,
+   "detected": false,
+   "offlabel": 2,
+   "by": []
+  },
+  {
+   "id": "SDWIN-190518235535",
+   "title": "Empire Mimikatz Backup Keys",
+   "techs": [
+    "T1003"
+   ],
+   "events": 7887,
+   "alerts": 3,
+   "fired": [
+    "T1003",
+    "T1047",
+    "T1055"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 2,
+   "by": [
+    "P01-ps-credential-tooling"
+   ]
+  },
+  {
+   "id": "SDWIN-190519005224",
+   "title": "Empire Remote Get Session",
+   "techs": [
+    "T1049"
+   ],
+   "events": 5047,
+   "alerts": 5,
+   "fired": [
+    "T1047",
+    "T1049",
+    "T1069",
+    "T1087",
+    "T1135"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 4,
+   "by": [
+    "P04-ps-session-discovery"
+   ]
+  },
+  {
+   "id": "SDWIN-190625103712",
+   "title": "Empire Mimikatz SAM Extract Hashes",
+   "techs": [
+    "T1003"
+   ],
+   "events": 12349,
+   "alerts": 3,
+   "fired": [
+    "T1003",
+    "T1047",
+    "T1055"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 2,
+   "by": [
+    "P01-ps-credential-tooling"
+   ]
+  },
+  {
+   "id": "SDWIN-191027055035",
+   "title": "RDP TaskManager LSASS Dump",
+   "techs": [
+    "T1003"
+   ],
+   "events": 5489,
+   "alerts": 2,
+   "fired": [
+    "T1003",
+    "T1055"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 1,
+   "by": [
+    "W01-lsass-access"
+   ]
+  },
+  {
+   "id": "SDWIN-191027223020",
+   "title": "Covenant ShellCmd InstallUtil",
+   "techs": [
+    "T1218"
+   ],
+   "events": 1730,
+   "alerts": 1,
+   "fired": [
+    "T1218"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W04-lolbin-proxy"
+   ]
+  },
+  {
+   "id": "SDWIN-200609225055",
+   "title": "MSF Record Mic",
+   "techs": [
+    "T1123"
+   ],
+   "events": 6202,
+   "alerts": 0,
+   "fired": [],
+   "in_scope": false,
+   "detected": false,
+   "offlabel": 0,
+   "by": []
+  },
+  {
+   "id": "SDWIN-200721232741",
+   "title": "Empire Regsvr32 Execution",
+   "techs": [
+    "T1218"
+   ],
+   "events": 2390,
+   "alerts": 3,
+   "fired": [
+    "T1059",
+    "T1218"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 1,
+   "by": [
+    "W04-lolbin-proxy"
+   ]
+  },
+  {
+   "id": "SDWIN-200724174200",
+   "title": "Covenant Remote WMI Eventing ActiveScriptEventConsumers",
+   "techs": [
+    "T1047"
+   ],
+   "events": 3719,
+   "alerts": 1,
+   "fired": [
+    "T1047"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W05-wmi-exec"
+   ]
+  },
+  {
+   "id": "SDWIN-200805020926",
+   "title": "Covenant DCSync",
+   "techs": [
+    "T1003"
+   ],
+   "events": 869,
+   "alerts": 1,
+   "fired": [
+    "T1003"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W03-dcsync"
+   ]
+  },
+  {
+   "id": "SDWIN-200805034820",
+   "title": "Covenant SC.exe Utility Query",
+   "techs": [
+    "T1021"
+   ],
+   "events": 629,
+   "alerts": 1,
+   "fired": [
+    "T1021"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W15-remote-service"
+   ]
+  },
+  {
+   "id": "SDWIN-200806015757",
+   "title": "Covenant Remote File Copy",
+   "techs": [
+    "T1021"
+   ],
+   "events": 506,
+   "alerts": 1,
+   "fired": [
+    "T1021"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W15-remote-service"
+   ]
+  },
+  {
+   "id": "SDWIN-200806022635",
+   "title": "Covenant SharpSC Create",
+   "techs": [
+    "T1021"
+   ],
+   "events": 3390,
+   "alerts": 0,
+   "fired": [],
+   "in_scope": true,
+   "detected": false,
+   "offlabel": 0,
+   "by": []
+  },
+  {
+   "id": "SDWIN-200806030120",
+   "title": "Covenant SharpSC Start",
+   "techs": [
+    "T1021"
+   ],
+   "events": 6046,
+   "alerts": 1,
+   "fired": [
+    "T1047"
+   ],
+   "in_scope": true,
+   "detected": false,
+   "offlabel": 1,
+   "by": []
+  },
+  {
+   "id": "SDWIN-200806035621",
+   "title": "Covenant SharpWMI Exec",
+   "techs": [
+    "T1047"
+   ],
+   "events": 2343,
+   "alerts": 1,
+   "fired": [
+    "T1047"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W05-wmi-exec"
+   ]
+  },
+  {
+   "id": "SDWIN-200806115603",
+   "title": "Covenant PowerShell Remoting Command",
+   "techs": [
+    "T1021"
+   ],
+   "events": 4284,
+   "alerts": 2,
+   "fired": [
+    "T1003",
+    "T1021"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 1,
+   "by": [
+    "P10-ps-remoting"
+   ]
+  },
+  {
+   "id": "SDWIN-200806130039",
+   "title": "Covenant GetDomainGroup Domain Admins",
+   "techs": [
+    "T1069"
+   ],
+   "events": 619,
+   "alerts": 0,
+   "fired": [],
+   "in_scope": true,
+   "detected": false,
+   "offlabel": 0,
+   "by": []
+  },
+  {
+   "id": "SDWIN-200904032946",
+   "title": "Invoke BypassUAC FodHelper",
+   "techs": [
+    "T1548"
+   ],
+   "events": 4139,
+   "alerts": 2,
+   "fired": [
+    "T1059"
+   ],
+   "in_scope": false,
+   "detected": false,
+   "offlabel": 1,
+   "by": []
+  },
+  {
+   "id": "SDWIN-200916232559",
+   "title": "Mimikatz Netlogon Unauthenticated NetrServerAuthenticate2",
+   "techs": [
+    "T1210"
+   ],
+   "events": 790,
+   "alerts": 1,
+   "fired": [
+    "T1003"
+   ],
+   "in_scope": false,
+   "detected": false,
+   "offlabel": 1,
+   "by": []
+  },
+  {
+   "id": "SDWIN-200918145959",
+   "title": "DCOM RegisterXLL",
+   "techs": [
+    "T1021"
+   ],
+   "events": 5504,
+   "alerts": 1,
+   "fired": [
+    "T1047"
+   ],
+   "in_scope": true,
+   "detected": false,
+   "offlabel": 1,
+   "by": []
+  },
+  {
+   "id": "SDWIN-200921230246",
+   "title": "Rubeus Elevated ASKTGT CreateNetOnly",
+   "techs": [
+    "T1003"
+   ],
+   "events": 3590,
+   "alerts": 2,
+   "fired": [
+    "T1003",
+    "T1053"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 1,
+   "by": [
+    "W02-credential-tooling"
+   ]
+  },
+  {
+   "id": "SDWIN-200922042230",
+   "title": "Empire Powerdump Extract Hashes",
+   "techs": [
+    "T1003"
+   ],
+   "events": 1182,
+   "alerts": 1,
+   "fired": [
+    "T1003"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W01-lsass-access"
+   ]
+  },
+  {
+   "id": "SDWIN-201009173318",
+   "title": "Covenant Remote WMI Wbemcomn DLL Hijacking",
+   "techs": [
+    "T1047"
+   ],
+   "events": 8947,
+   "alerts": 7,
+   "fired": [
+    "T1003",
+    "T1021",
+    "T1047",
+    "T1055",
+    "T1087"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 4,
+   "by": [
+    "P08-ps-wmi",
+    "W05-wmi-exec"
+   ]
+  },
+  {
+   "id": "SDWIN-201012183248",
+   "title": "Covenant Wuauclt CreateRemoteThread Execution",
+   "techs": [
+    "T1218"
+   ],
+   "events": 1326,
+   "alerts": 2,
+   "fired": [
+    "T1055",
+    "T1218"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 1,
+   "by": [
+    "W04-lolbin-proxy"
+   ]
+  },
+  {
+   "id": "SDWIN-201017061100",
+   "title": "WMIC Remote XSL Jscript Execution",
+   "techs": [
+    "T1220"
+   ],
+   "events": 1364,
+   "alerts": 1,
+   "fired": [
+    "T1003"
+   ],
+   "in_scope": false,
+   "detected": false,
+   "offlabel": 1,
+   "by": []
+  },
+  {
+   "id": "SDWIN-201018195009",
+   "title": "Lsass Memory Dump via Comsvcs.dll",
+   "techs": [
+    "T1003"
+   ],
+   "events": 184,
+   "alerts": 2,
+   "fired": [
+    "T1003"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W01-lsass-access",
+    "W02-credential-tooling"
+   ]
+  },
+  {
+   "id": "SDWIN-201018225619",
+   "title": "Lsass Memory Dump via Syscalls",
+   "techs": [
+    "T1003"
+   ],
+   "events": 118,
+   "alerts": 1,
+   "fired": [
+    "T1003"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W01-lsass-access"
+   ]
+  },
+  {
+   "id": "SDWIN-201019033054",
+   "title": "Psexec Reg LSA Secrets Dump",
+   "techs": [
+    "T1003"
+   ],
+   "events": 286,
+   "alerts": 2,
+   "fired": [
+    "T1003",
+    "T1021"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 1,
+   "by": [
+    "W02-credential-tooling"
+   ]
+  },
+  {
+   "id": "SDWIN-201019224718",
+   "title": "Logon Scripts via UserInitMprLogonScript",
+   "techs": [
+    "T1037"
+   ],
+   "events": 122,
+   "alerts": 0,
+   "fired": [],
+   "in_scope": false,
+   "detected": false,
+   "offlabel": 0,
+   "by": []
+  },
+  {
+   "id": "SDWIN-201020013208",
+   "title": "UI Prompt For Credentials Function",
+   "techs": [
+    "T1056"
+   ],
+   "events": 163,
+   "alerts": 0,
+   "fired": [],
+   "in_scope": false,
+   "detected": false,
+   "offlabel": 0,
+   "by": []
+  },
+  {
+   "id": "SDWIN-201021001911",
+   "title": "Netsh Open FW Proxy Ports",
+   "techs": [
+    "T1562"
+   ],
+   "events": 2366,
+   "alerts": 1,
+   "fired": [
+    "T1562"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W10-impair-defenses"
+   ]
+  },
+  {
+   "id": "SDWIN-201021204544",
+   "title": "Service Modification Fax",
+   "techs": [
+    "T1543"
+   ],
+   "events": 437,
+   "alerts": 0,
+   "fired": [],
+   "in_scope": false,
+   "detected": false,
+   "offlabel": 0,
+   "by": []
+  },
+  {
+   "id": "SDWIN-201021232814",
+   "title": "Internet Explorer Version Discovery",
+   "techs": [
+    "T1518"
+   ],
+   "events": 68,
+   "alerts": 0,
+   "fired": [],
+   "in_scope": false,
+   "detected": false,
+   "offlabel": 0,
+   "by": []
+  },
+  {
+   "id": "SDWIN-201022002145",
+   "title": "HH Execution of Local Compiled HTML Payload",
+   "techs": [
+    "T1218"
+   ],
+   "events": 1221,
+   "alerts": 1,
+   "fired": [
+    "T1218"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W04-lolbin-proxy"
+   ]
+  },
+  {
+   "id": "SDWIN-201022013121",
+   "title": "Control Panel Execution",
+   "techs": [
+    "T1218"
+   ],
+   "events": 1291,
+   "alerts": 1,
+   "fired": [
+    "T1218"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W04-lolbin-proxy"
+   ]
+  },
+  {
+   "id": "SDWIN-201022025808",
+   "title": "Mshta VBScript Execute PowerShell",
+   "techs": [
+    "T1218"
+   ],
+   "events": 1127,
+   "alerts": 1,
+   "fired": [
+    "T1218"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W04-lolbin-proxy"
+   ]
+  },
+  {
+   "id": "SDWIN-201022035214",
+   "title": "Mshta HTML Application (HTA) Execution",
+   "techs": [
+    "T1218"
+   ],
+   "events": 1553,
+   "alerts": 1,
+   "fired": [
+    "T1218"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W04-lolbin-proxy"
+   ]
+  },
+  {
+   "id": "SDWIN-201022042947",
+   "title": "PurpleSharp Active Directory Playbook I",
+   "techs": [
+    "T1021",
+    "T1110",
+    "T1135",
+    "T1558"
+   ],
+   "events": 25993,
+   "alerts": 5,
+   "fired": [
+    "T1021",
+    "T1047",
+    "T1087"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 2,
+   "by": [
+    "W15-remote-service"
+   ]
+  },
+  {
+   "id": "SDWIN-201023020513",
+   "title": "Register-CimProvider Execute Dll",
+   "techs": [
+    "T1218"
+   ],
+   "events": 1316,
+   "alerts": 1,
+   "fired": [
+    "T1218"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W04-lolbin-proxy"
+   ]
+  },
+  {
+   "id": "SDWIN-201023023651",
+   "title": "Bitsadmin Download Malicious File",
+   "techs": [
+    "T1197"
+   ],
+   "events": 424,
+   "alerts": 0,
+   "fired": [],
+   "in_scope": false,
+   "detected": false,
+   "offlabel": 0,
+   "by": []
+  },
+  {
+   "id": "SDWIN-201026235835",
+   "title": "Process Herpaderping Mimikatz",
+   "techs": [
+    "T1055"
+   ],
+   "events": 282,
+   "alerts": 1,
+   "fired": [
+    "T1003"
+   ],
+   "in_scope": true,
+   "detected": false,
+   "offlabel": 1,
+   "by": []
+  },
+  {
+   "id": "SDWIN-201029001615",
+   "title": "Python HTTP Server",
+   "techs": [
+    "T1059"
+   ],
+   "events": 2395,
+   "alerts": 2,
+   "fired": [
+    "T1059",
+    "T1562"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 1,
+   "by": [
+    "W09-script-abuse"
+   ]
+  },
+  {
+   "id": "SDWIN-201102041306",
+   "title": "PowerShell HTTP Listener",
+   "techs": [
+    "T1059"
+   ],
+   "events": 110,
+   "alerts": 0,
+   "fired": [],
+   "in_scope": true,
+   "detected": false,
+   "offlabel": 0,
+   "by": []
+  },
+  {
+   "id": "SDWIN-201219070027",
+   "title": "Remote Scheduled Task Creation",
+   "techs": [
+    "T1053"
+   ],
+   "events": 1041,
+   "alerts": 5,
+   "fired": [
+    "T1021",
+    "T1053",
+    "T1059"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 2,
+   "by": [
+    "W06-scheduled-task"
+   ]
+  },
+  {
+   "id": "SDWIN-201219075059",
+   "title": "Remote Scheduled Task Modification",
+   "techs": [
+    "T1053"
+   ],
+   "events": 2657,
+   "alerts": 2,
+   "fired": [
+    "T1059"
+   ],
+   "in_scope": true,
+   "detected": false,
+   "offlabel": 1,
+   "by": []
+  },
+  {
+   "id": "SDWIN-210314014019",
+   "title": "Exchange ProxyLogon SSRF RCE Vuln POC",
+   "techs": [
+    "T1505"
+   ],
+   "events": 10487,
+   "alerts": 2,
+   "fired": [
+    "T1021",
+    "T1059"
+   ],
+   "in_scope": false,
+   "detected": false,
+   "offlabel": 2,
+   "by": []
+  },
+  {
+   "id": "SDWIN-210427020247",
+   "title": "Export ADFS Database Configuration Remotely",
+   "techs": [
+    "T0000"
+   ],
+   "events": 285,
+   "alerts": 0,
+   "fired": [],
+   "in_scope": false,
+   "detected": false,
+   "offlabel": 0,
+   "by": []
+  },
+  {
+   "id": "SDWIN-210611210814",
+   "title": "APT Simulator Cobalt Strike",
+   "techs": [
+    "T1134"
+   ],
+   "events": 2611,
+   "alerts": 3,
+   "fired": [
+    "T1003",
+    "T1021",
+    "T1059"
+   ],
+   "in_scope": false,
+   "detected": false,
+   "offlabel": 3,
+   "by": []
+  },
+  {
+   "id": "SDWIN-220630130349",
+   "title": "Disabling Windows Event Logging via Audit Policy Modification",
+   "techs": [
+    "T1562"
+   ],
+   "events": 13645,
+   "alerts": 1,
+   "fired": [
+    "T1562"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 0,
+   "by": [
+    "W10-impair-defenses"
+   ]
+  },
+  {
+   "id": "SDWIN-220705170038",
+   "title": "Modifying Security Event Log File Path via Modification of Log Configuration",
+   "techs": [
+    "T1562"
+   ],
+   "events": 25208,
+   "alerts": 2,
+   "fired": [
+    "T1218",
+    "T1562"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 1,
+   "by": [
+    "W10-impair-defenses"
+   ]
+  },
+  {
+   "id": "SDWIN-220708104215",
+   "title": "Stopping Event Log Service via Modification of Start Up Type",
+   "techs": [
+    "T1562"
+   ],
+   "events": 6563,
+   "alerts": 3,
+   "fired": [
+    "T1003",
+    "T1059",
+    "T1562"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 2,
+   "by": [
+    "W10-impair-defenses"
+   ]
+  },
+  {
+   "id": "SDWIN-220708104300",
+   "title": "Stopping Event Log Service after Stopping Depending Services",
+   "techs": [
+    "T1562"
+   ],
+   "events": 7511,
+   "alerts": 0,
+   "fired": [],
+   "in_scope": true,
+   "detected": false,
+   "offlabel": 0,
+   "by": []
+  },
+  {
+   "id": "SDWIN-230720004300",
+   "title": "Dumping NTDS.dit using NinjaCopy",
+   "techs": [
+    "T1003"
+   ],
+   "events": 13969,
+   "alerts": 5,
+   "fired": [
+    "T1003",
+    "T1047",
+    "T1055",
+    "T1059"
+   ],
+   "in_scope": true,
+   "detected": true,
+   "offlabel": 3,
+   "by": [
+    "P01-ps-credential-tooling"
+   ]
+  }
+ ]
+}

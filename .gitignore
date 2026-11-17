@@ -1,0 +1,6 @@
+data/*.zip
+data/real_*.json
+out/
+__pycache__/
+.pytest_cache/
+*.pyc
